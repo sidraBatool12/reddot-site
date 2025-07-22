@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQs Styled</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+    .faq-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    @media (max-width: 768px) {
+      .faq-section {
+        padding: 16px 0 0 0;
+        min-height: unset;
+      }
+      .faq-container {
+        flex-direction: column !important;
+        width: 100%;
+        max-width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0;
+      }
+      .faq-left {
+        padding: 12px 0 0 0;
+        border-radius: 0;
+        width: 100%;
+        border-right: none;
+        align-items: center;
+        background: #d63357;
+      }
+      .faq-item {
+        margin: 4px 20px;
+        padding: 10px 8px 10px 12px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 100%;
+        /* background: #d63357 !important; */
+        color: #fff !important;
+        border-radius: 8px;
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.07);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        transition: background 0.2s, color 0.2s, transform 0.2s;
+        overflow: hidden;
+      }
+      .faq-right {
+        padding: 16px 12px 0 12px;
+        font-size: 15px;
+      }
+      .faq-plus {
+        right: 8px;
+        width: 26px;
+        height: 26px;
+        font-size: 18px;
+      }
+      .faq-left p.fs-2 {
+        font-size: 1.4rem !important;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .faq-container {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow:visible;
+    }
+
+    .faq-left {
+      background-color: #d63357;
+      color: white;
+      padding: 30px;
+      flex: 1;
+      border-right: 2px solid #dee2e6;
+      position: relative;
+      overflow: visible;
+    }
+
+    .faq-left h2 {
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .faq-item {
+       box-shadow: 4px 4px  4px rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 12px 60px 12px 60px; /* balanced for overflow on both sides */
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: calc(100% + 40px); /* Expand beyond red box */
+      margin-left: -20px; /* Pull left side out */
+    }
+
+    .faq-item:hover {
+      background-color: white;
+      color: black;
+      transform: scale(1.09);
+      z-index: 2;
+    }
+
+    .faq-item .text {
+      text-align: center;
+      width: 100%;
+    }
+
+    .faq-plus {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 0, 0, 0.4);
+      color: #fbf9fa;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      cursor: pointer;
+
+    }
+
+    .faq-plus:hover,
+    .faq-item:hover .faq-plus {
+      background-color: #d63357;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(214, 51, 87, 0.25);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    /* Small screen: faq-item hover text black */
+    @media (max-width: 768px) {
+      .faq-item:hover,
+      .faq-item:hover .text {
+        color: #000 !important;
+      }
+    }
+
+    .faq-right {
+      flex: 1;
+      text-align: justify;
+      margin: 50px;
+      padding: 40px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="faq-section">
+    <div class="container faq-container">
+      <div class="row">
+        <!-- Left Side -->
+        <div class="col-lg-5 faq-left d-flex flex-column">
+          <p class="fs-2">FAQs</p>
+          <div class="w-100 d-flex flex-column flex-md-column justify-content-center">
+            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+              <span class="text">What Services Do You Offer?</span>
+              <span class="faq-plus">+</span>
+            </div>
+            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+              <span class="text">How Does Reddot Movers Provide A Great Moving Experience?</span>
+              <span class="faq-plus">+</span>
+            </div>
+            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+              <span class="text">How Do I Go About Getting Your Service?</span>
+              <span class="faq-plus">+</span>
+            </div>
+            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+              <span class="text">When Should I Book Your Service?</span>
+              <span class="faq-plus">+</span>
+            </div>
+            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+              <span class="text">How Many Manpower And Truck Will You Send?</span>
+              <span class="faq-plus">+</span>
+            </div>
+            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+              <span class="text">How Do I Go About Getting Your Service?</span>
+              <span class="faq-plus">+</span>
+            </div>
+            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+              <span class="text">Are You Able To Handle Delicate Items Such As Piano?</span>
+              <span class="faq-plus">+</span>
+            </div>
+            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+              <span class="text">Do You Offer Disposal Services?</span>
+              <span class="faq-plus">+</span>
+            </div>
+          </div>
+        </div>
+        <!-- Right Side -->
+        <div class="col-lg-7 faq-right d-flex align-items-center">
+          <p class="fs-5">
+            Reddot Movers provides home, office, commercial moving services in Singapore.
+            We also do event moves and cross-border services. For home and office moves,
+            we offer optional services such as packing, unpacking, disposal and handyman
+            services as a one-stop service. We have experience in almost all types of move.
+            In doubt, you may directly contact us to enquire.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
