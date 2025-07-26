@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     margin: 0;
     padding: 0;
@@ -47,4 +48,55 @@ body {
     .hero-row > div {
         margin-bottom: 1.5rem;
     }
+=======
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section1{
+    background-image: url('imgs/herosec.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #d32f2f !important;
+}
+
+/* Active nav link */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active .nav-link {
+    color: #d32f2f !important;
+    font-weight: bold !important;
+}
+
+/* Optional: active dropdown item */
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+    color: #d32f2f !important;
+    background-color: #f8d7da !important;
+    font-weight: bold;
+}
+ button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Responsive: Ensure hero text is centered on small screens */
+@media (max-width: 991.98px) {
+    .hero-row {
+        flex-direction: column-reverse !important;
+        text-align: center;
+    }
+    .hero-row > div {
+        margin-bottom: 1.5rem;
+    }
+>>>>>>> d9fcdec89a9e0de2758aac7413cc07c281ab0c01
 }

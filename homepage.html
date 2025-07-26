@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+</html><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,7 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>homepage</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome CDN (latest) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
+
+
+
+ @media (max-width: 991.98px) {
+    .custom-mobile-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #f8f9fa;
+      z-index: 999;
+      padding: 1rem;
+    }
+  }
     /* Background and Overlay */
     .hero-section {
       background: url(imgs/herosec.png) no-repeat center center/cover;
@@ -235,13 +253,6 @@
       margin-left: 0;
     }
 
-
-    .dedicated-heading {
-    
-      /* position: absolute; */
-
-    }
-
     .dedicated-heading .highlight {
       color: #E14658;
     }
@@ -358,7 +369,7 @@
 
         /* part six section 4 */
      .last-section-main {
-      background-image: url('imgs/last-section-bg.png');
+      background-image: url('imgs/last-sc-bg.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -378,8 +389,83 @@
     }
     a{
       text-decoration: none;
+      /* color: white; */
+    }
+
+/* section cards */
+
+      .service-card {
+      border-radius: 20px;
+      padding: 6px;
+      background-color: #f5f5f5;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header-flex {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .card-header-flex img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+
+    .service-card p {
+      font-size: 14px;
+      color: #232222;
+    }
+
+    .get-started-btn {
+      margin-top: 15px;
+      padding: 8px 20px;
+      border-radius: 30px;
+      justify-content: right;
+      font-weight: 500;
+      border: 2px solid #E14658;
+      color: #E14658;
+      background-color: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .get-started-btn:hover {
+      background-color: #E14658;
       color: white;
     }
+
+     .our-team-card {
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .our-team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.9);
+    }
+
+/* footer */
+
+  .custom-footer{
+   background:
+    url(imgs/sky-slue.png) top right,
+    url(imgs/yellow-green.png) bottom right;
+
+  background-size: 400px, 500px; /* adjust sizes */
+  background-repeat: no-repeat;
+}
+
 
 
 
@@ -388,44 +474,64 @@
 
 <body>
   <section> <!-- Navbar -->
-    <nav class="navbar p-4 navbar-expand-lg navbar-light bg-light ">
-      <div class="container"> <!-- Logo --> <a class="navbar-brand" href="#"> <img style="width: 100%;"
-            src="imgs/logo.png" alt="Redot Logo" height="40"> </a> <!-- Toggler --> <button class="navbar-toggler"
-          type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"> <span
-            class="navbar-toggler-icon"></span> </button> <!-- Navbar Content -->
-      <div class="collapse navbar-collapse " id="navbarNavDropdown">
+   <nav class="navbar p-4 navbar-expand-lg navbar-light bg-light position-relative">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img style="width: 100%;" src="imgs/logo.png" alt="Redot Logo" height="40">
+    </a>
 
-          <ul class="navbar-nav mx-auto ms-5 ps-5">
-            <li class="nav-item m-2"> <a class="nav-link fs-5 fw-bold active" href="homepage.html">Home</a> </li>
-            <li class="nav-item m-2"> <a class="nav-link fs-5 fw-bold" href="aboutpage.html">About</a> </li>
-            <!-- Service Dropdown -->
-            <li class="nav-item dropdown m-2"> <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#"
-                id="serviceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Service </a>
-              <ul class="dropdown-menu shadow border-0 rounded-3 p-2" aria-labelledby="serviceDropdown">
-                <li><a class="dropdown-item rounded " href="housemoving1.html">Housemoving1</a></li>
-                <li><a class="dropdown-item rounded " href="housemoving2.html">Housemoving2</a></li>
-                <li><a class="dropdown-item rounded " href="housemoving3.html">Housemoving3</a></li>
-                <li><a class="dropdown-item rounded" href="housemoving4.html">Housemoving4</a></li>
-                <li><a class="dropdown-item rounded " href="housemoving5.html">Housemoving5</a></li>
-              </ul>
-            </li> <!-- Blog -->
-            <li class="nav-item m-2"> <a class="nav-link fs-5 fw-bold" href="blogpage.html">Blog</a> </li>
-            <!-- Resources Dropdown -->
-            <li class="nav-item dropdown m-2"> <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#"
-                id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Resources </a>
-              <ul class="dropdown-menu shadow border-0 rounded-3 p-2" aria-labelledby="resourcesDropdown">
-                <li><a class="dropdown-item rounded fw-semibold" href="#">Docs</a></li>
-                <li><a class="dropdown-item rounded fw-semibold" href="#">Tutorials</a></li>
-              </ul>
-            </li> <!-- Contact -->
-            <li class="nav-item m-2"> <a class="nav-link fs-5 fw-bold" href="contactpage.html">Contact</a> </li>
-          </ul> <!-- Login Button -->
-          <div
-            class="d-lg-flex align-items-center ms-lg-3 w-100 justify-content-lg-end justify-content-center mt-3 mt-lg-0">
-            <a href="#" class="btn btn-danger rounded-pill px-4 py-2 text-white fw-bold"> Log In </a> </div>
-        </div>
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse custom-mobile-nav" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto ms-5 ps-5">
+        <li class="nav-item m-2">
+          <a class="nav-link fs-5 fw-bold active" href="homepage.html">Home</a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link fs-5 fw-bold" href="aboutpage.html">About</a>
+        </li>
+        <!-- Dropdown: Service -->
+        <li class="nav-item dropdown m-2">
+          <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#" id="serviceDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> Service </a>
+          <ul class="dropdown-menu shadow border-0 rounded-3 p-2" aria-labelledby="serviceDropdown">
+            <li><a class="dropdown-item rounded" href="housmoving1.html">Housemoving1</a></li>
+            <li><a class="dropdown-item rounded" href="housemoving2.html">Housemoving2</a></li>
+            <li><a class="dropdown-item rounded" href="hohousemoving3.html">Housemoving3</a></li>
+            <li><a class="dropdown-item rounded" href="housemoving4.html">Housemoving4</a></li>
+          </ul>
+        </li>
+        <!-- Blog -->
+        <li class="nav-item m-2">
+          <a class="nav-link fs-5 fw-bold" href="blogpage.html">Blog</a>
+        </li>
+        <!-- Dropdown: Resources -->
+        <li class="nav-item dropdown m-2">
+          <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> Resources </a>
+          <ul class="dropdown-menu shadow border-0 rounded-3 p-2" aria-labelledby="resourcesDropdown">
+            <li><a class="dropdown-item rounded fw-semibold" href="#">Docs</a></li>
+            <li><a class="dropdown-item rounded fw-semibold" href="#">Tutorials</a></li>
+          </ul>
+        </li>
+        <!-- Contact -->
+        <li class="nav-item m-2">
+          <a class="nav-link fs-5 fw-bold" href="contactpage.html">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Login Button -->
+      <div class="d-lg-flex align-items-center ms-lg-3 w-100 justify-content-lg-end justify-content-center mt-3 mt-lg-0">
+        <a href="#" class="btn btn-danger rounded-pill px-4 py-2 text-white fw-bold"> Log In </a>
       </div>
-    </nav> 
+    </div>
+  </div>
+</nav>
     <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center">
       <div class="overlay"></div>
@@ -512,10 +618,10 @@
       <!-- Card 2 -->
       <div class="col-md-4">
         <div class="card custom-card2 text-center">
-          <img class="" src="imgs/cardimg2.png" alt="Object 2" class="card-img-top rounded img2">
-          <div class="card-body mt-3">
+          <img class="mb-3" src="imgs/cardimg2.png" alt="Object 2" class="card-img-top rounded img2">
+          <div class="card-body mt- pb-4">
             <h5><span  class="special" style="color: red;">Super Fast Movers</span></h5>
-            <p class="card-text">We complete our jobs at lightning speed without compromising care and safety to your items</p>
+            <p class="card-text ">We complete our jobs at lightning speed without compromising care and safety to your items</p>
           </div>
         </div>
       </div>
@@ -524,7 +630,7 @@
       <div class="col-md-4">
         <div class="card custom-card text-center">
           <img src="imgs/cardimg3.png" alt="Object 3" class="card-img-top rounded">
-          <div class="card-body mt-2">
+          <div class="card-body mt-3">
             <h5 class="card-title  mt-2"><span  class="special" style="color: red;">Awesome Work Culture</span></h5>
             <p class="card-text">Our movers exude positive assuring vibes and put your at ease the moment you meet them</p>
           </div>
@@ -640,53 +746,40 @@
         </div>
 
 
+<div class="container my-5">
+  <!-- Responsive Row -->
+  <div class="row align-items-center flex-column-reverse flex-md-row text-center text-md-start">
+    
+    <!-- Text Column -->
+    <div class="col-md-6">
+      <h2 class="top-heading">
+        The <span class="highlight">Best</span> And Most Reliable Movers In Singapore
+      </h2>
 
-<div class="container m-5">
-        <!-- Top Row -->
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <h2 class="top-heading">
-          The <span class="highlight">Best</span> And Most Reliable Movers In Singapore
-        </h2>
-            <img src="imgs/Vector 694.png" style="margin-left: 75px; position: absolute; margin-top: -60px; width: 80px;" alt="">
-        
-        <div class="para ">
-        <p>Our movers have decades of experience in the relocation industry moving everything from household furniture.</p><br>
+      <!-- Decorative Vector (only large screens) -->
+      <img 
+        src="imgs/Vector 694.png" 
+        class="d-none d-lg-block position-absolute" 
+        style="margin-left: 75px; margin-top: -55px; width: 75px;" 
+        alt=""
+      >
+
+      <div class="para">
+        <p>Our movers have decades of experience in the relocation industry moving everything from household furniture.</p>
+        <br>
         <p>We understand that every move has its own unique requirements, complexities and stories. We are here to help and customize our services to your specific needs.</p>
-      </div></div>
-      <div class="col-md-6">
-        <!-- Right image placeholder -->
-        <img src="imgs/redot-box.png" alt="Main Image" class="right-img">
       </div>
     </div>
-    <!-- Bottom Row -->
-    <div class="row mt-5 align-items-center container">
-      <div class="col-md-6">
-        <div class="circle">
-          <div class="" style="margin-left: 90px;">
-          <img  src="imgs/round-img1.png" alt="Img 1" class="circle-img me-4 mt-5">
-          <img src="imgs/round-img3.png" alt="Img 2" class="circle-img mb-5 ">
-          </div>
-          <div>
-        
-          <img src="imgs/round-img3.png" alt="Img 3" class="circle-img mt-5 me-4">
-          <img src="imgs/round-img4.png" alt="Img 4" class="circle-img mb-5 ">
-         
-          </div>
-          </div>
-      </div>
-      <div class="col-md-6 ">
-       
-        <p class="dedicated-heading text-md-start " style="font-size: 60px ;">Dedicated  <span class="highlight">Crew
-        </span></p>
-        <img src="imgs/Vector 694.png" style="margin-left: 310px; position: absolute; margin-top: -30px;" alt="">
-         
-        
-        
 
-      </div>
+    <!-- Image Column -->
+    <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center">
+      <img src="imgs/redot-box.png" alt="Main Image" class="img-fluid">
     </div>
-    </div>
+
+  </div>
+</div>
+
+
   </section>
 
   <!-- sction4 -->
@@ -704,17 +797,88 @@
 
   <!-- second part -->
 
-   <div class="cater d-flex justify-content-between align-items-center">
-
-
-        <div class="para col-md-6 ms-5 ps-4">
-            <h2>Range of <span style="color: red;">services to cater</span> your needs</h2>
-            <p>With a variety of services, we are able to meet your every moving and storage needs - from moving your residences locally, shifting your business operations and relocating overseas.</p>
-            <h6>Check out all our available services today.</h6>
-        </div>
+   <div class="container my-5">
+  <div class="row align-items-center text-center text-md-start">
     
-    <img src="imgs/truck.png" alt="">
+    <!-- Text Content -->
+    <div class="col-md-6">
+      <div class="ps-md-4">
+        <h2>Range of <span style="color: red;">services to cater</span> your needs</h2>
+        <p>
+          With a variety of services, we are able to meet your every moving and storage needs - from moving your residences locally, shifting your business operations and relocating overseas.
+        </p>
+        <h6>Check out all our available services today.</h6>
+      </div>
     </div>
+
+    <!-- Truck Image (hide on small screens) -->
+    <div class="col-md-6 d-none d-md-block text-center">
+      <img style="width: auto;
+         position: relative; 
+         margin-left: 350px
+         
+      ;" src="imgs/truck.png" alt="Truck" class="img-fluid">
+    </div>
+    
+  </div>
+</div>
+
+    <section class="section-cards">
+
+  <div class="container my-5">
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="service-card text-center">
+        <div class="card-header-flex">
+          <img src="imgs/local-house-moving.png" alt="House Icon">
+          <p class="text-dark mt-5 fw-bold">Local House Moving</p>
+        </div>
+        <p style="line-height: 25px;">Moving to a new home can be exciting yet stressful experience. Our team of reliable professionals with provide you with top notch one-stop services from packing to unpacking to make your move seamless..</p>
+        <button class="get-started-btn">Get Started</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="service-card  text-center">
+        <div class="card-header-flex">
+          <img src="imgs/International-Relocation.png" alt="Office Icon">
+          <p class="text-dark mt-5 fw-bold">International Relocation</p>
+        </div>
+        <p>Relocating to a new country? We provide a comprehensive service including packing, shipping and documentation and have partnership with over 100 partners globally to make sure everything moves seamlessly.</p>
+        <button class="get-started-btn">Learn more</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="service-card  text-center">
+        <div class="card-header-flex">
+          <img src="imgs/Storage-&-Warehousing.png" alt="Furniture Icon">
+          <p class="text-dark mt-5 fw-bold">Storage & Warehousing</p>
+        </div>
+        <p style="line-height: 29px;">Air-condition and ambient storage secured warehouses for our customers to put away their belongings temporary in between moves.</p>
+        <button class="get-started-btn">Learn more</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="service-card  text-center">
+        <div class="card-header-flex">
+          <img src="imgs/Commercial-Move.png" alt="Storage Icon">
+          <p class="text-dark mt-5 fw-bold">Commercial Move</p>
+        </div>
+        <p style="line-height: 25px;">We provide relocation of your business operations, be it office move or shifting your restaurant equipment - with minimal disruptions.</p>
+        <button class="get-started-btn">Learn more</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
 
 
     <!-- third part -->
@@ -1021,7 +1185,68 @@
 <!-- fourth part -->
 
 
+<div class="container py-5">
 
+
+  <div class="text-center pb-5">
+     <img 
+  src="imgs/Vector.png" 
+  class="d-none d-lg-block position-absolute" 
+  style="margin-left: 520px; margin-top: -25px; width: 75px;" 
+  alt="">
+    <h2>Our Team</h2>
+  </div>
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6">
+      <div class="card our-team-card flex-column flex-md-row align-items-center border-0 shadow-sm h-100">
+        <div class="col-12 col-md-6 p-0">
+          <img src="imgs/our-team-img1.png" class="img-fluid w-100" alt="Local House Moving">
+        </div>
+        <div class="card-body col-12 col-md-6">
+          <h5 class="card-title">Local House Moving</h5>
+          <p class="card-text">Moving to a new home can be exciting yet stressful. Our reliable professionals provide top-notch service for a smooth move.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-12 col-md-6">
+      <div class="card our-team-card flex-column flex-md-row align-items-center border-0 shadow-sm h-100">
+        <div class="col-12 col-md-6 p-0">
+          <img src="imgs/our-team-img2.png" class="img-fluid w-100" alt="Local House Moving">
+        </div>
+        <div class="card-body col-12 col-md-6">
+          <h5 class="card-title">Local House Moving</h5>
+          <p class="card-text">Moving to a new home can be exciting yet stressful. Our reliable professionals provide top-notch service for a smooth move.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-12 col-md-6">
+      <div class="card our-team-card flex-column flex-md-row align-items-center border-0 shadow-sm h-100">
+        <div class="col-12 col-md-6 p-0">
+          <img src="imgs/our-team-img3.png" class="img-fluid w-100" alt="Local House Moving">
+        </div>
+        <div class="card-body col-12 col-md-6">
+          <h5 class="card-title">Local House Moving</h5>
+          <p class="card-text">Moving to a new home can be exciting yet stressful. Our reliable professionals provide top-notch service for a smooth move.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="col-12 col-md-6">
+      <div class="card our-team-card flex-column flex-md-row align-items-center border-0 shadow-sm h-100">
+        <div class="col-12 col-md-6 p-0">
+          <img src="imgs/our-team-img4.png" class="img-fluid w-100" alt="Local House Moving">
+        </div>
+        <div class="card-body col-12 col-md-6">
+          <h5 class="card-title">Local House Moving</h5>
+          <p class="card-text">Moving to a new home can be exciting yet stressful. Our reliable professionals provide top-notch service for a smooth move.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -1030,7 +1255,20 @@
 
 <!-- fifit part -->
 
-
+<div class="items py-5 mb-5" style="background-color: rgb(254, 243, 245);">
+  <div class="container">
+    <div class="d-flex justify-content-center flex-wrap gap-4">
+      <img src="imgs/chair.png" class="img-fluid" style="max-width: 100px;" alt="">
+      <img src="imgs/bed.png" class="img-fluid" style="max-width: 100px;" alt="">
+      <img src="imgs/cups.png" class="img-fluid" style="max-width: 100px;" alt="">
+      <img src="imgs/clock.png" class="img-fluid" style="max-width: 100px;" alt="">
+      <img src="imgs/verse.png" class="img-fluid" style="max-width: 100px;" alt="">
+      <img src="imgs/sofa.png" class="img-fluid" style="max-width: 100px;" alt="">
+      <img src="imgs/truck2.png" class="img-fluid" style="max-width: 100px;" alt="">
+      <img src="imgs/washing-machine.png" class="img-fluid" style="max-width: 100px;" alt="">
+    </div>
+  </div>
+</div>
 
 
 
@@ -1043,18 +1281,86 @@
 
 
 
-
- <section class="last-section-main">
-    <div class="last-section container col-md-12">
-      <div class="container text-center">
-        <img src="imgs/Vector.png" class="w-20" alt="">
+<section class="last-section-main py-5" style="background-color: #f8f9fa;">
+  <div class="container">
+    <div class="bg-white rounded shadow p-5 mx-auto" style="max-width: 700px;">
+      <div class="text-center">
+        <img src="imgs/Vector.png" class="img-fluid mb-3" style="max-width: 100px;" alt="">
         <h2 class="text-center">Speak to our moving specialist today!</h2>
         <p class="text-center mt-3">Take your first step to experience a hassle-free moving.</p>
-        <buttton class="btn btn-danger rounded-pill ps-5  pe-5 pt-2 pb-2 mt-3"><a class="text-white" href="">Call Us</a></buttton>
+        <button class="btn btn-danger rounded-pill ps-5 pe-5 pt-2 pb-2 mt-3">
+          <a class="text-white text-decoration-none" href="">Call Us</a>
+        </button>
       </div>
-
     </div>
-  </section>
-  </body>
+  </div>
+</section>
+
+
+
+  <!-- footer -->
+
+    <footer class="custom-footer " style="padding: 70px; padding-top: 130px;
+    ">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+        <!-- Logo and Socials -->
+        <div>
+          <div class="logo mb-2"><img src="asets/logo.png" alt=""></div>
+          <small>
+            Monday - Friday 9am - 5:30pm<br>
+            Saturday 9am - 1:30pm<br>
+            Sunday Closed
+          </small>
+          <div class="social-icons mt-3">
+           <i class="fa-brands fa-facebook-f"></i>
+           <i class="fa-brands fa-twitter"></i>
+           <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div>
+          <h6 class="fw-bold">Hours</h6>
+          <p class="mb-1">Monday - Friday 9am - 5:30pm</p>
+          <p class="mb-1">Saturday 9am - 1:30pm</p>
+          <p class="mb-0">Sunday Closed</p>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h6 class="fw-bold">Contact Us</h6>
+          <p class="mb-1">Reddot X Pte Ltd.</p>
+          <p class="mb-1"><a href="mailto:hello@reddotmovers.sg"><span style="color: black;"><u>hello@reddotmovers.sg</u></span></a></p>
+          <p class="mb-1">Local Move: +65 9771 4475</p>
+          <p class="mb-0">International Move: +65 9800 5411</p>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <h6 class="fw-bold">Address</h6>
+          <p class="mb-1">17 Mandai Estate 04-01A</p>
+          <p class="mb-0">Singapore 729934<br>(Warehouse)</p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 
 </html>

@@ -6,6 +6,8 @@
   <title>housemoving4</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+
+    
     /* Background and Overlay */
     .hero-section {
       background: url(imgs/herosec.png) no-repeat center center/cover;
@@ -83,12 +85,359 @@
         min-height: unset;
       }
     }
+       /* laptop-girl */
+
+
+
+
+        .main-heading span {
+            color: #ff4e6a;
+        }
+
+        .image-section {
+            background-image: url(imgs/laptop-girl-bg1.png);
+            margin: 60px 0;
+            background-repeat: no-repeat;
+        }
+
+
+        .btn-custom {
+            background-color: rgb(255, 79, 79);
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+        }
+
+        /* moving singapore */
+        .section-heading {
+            font-size: 30px;
+            /* font-weight: 600; */
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-heading span {
+            color: #E14658;
+        }
+
+        .feature-box {
+            background-color: #fef6f9;
+            border-radius: 16px;
+            text-align: center;
+            padding: 20px 20px;
+            height: 100%;
+        }
+
+        .feature-img {
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .feature-text {
+            font-size: 18px;
+            color: #555;
+            margin: 0px 50px;
+        }
+
+
+
+        /* marquee */
+
+
+        .marquee-row {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee-left 25s linear infinite;
+        }
+
+        .marquee-content2 {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee-right 25s linear infinite;
+        }
+
+        @keyframes marquee-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .review-card {
+            display: inline-block;
+            background: #fff;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin: 0 1rem;
+            width: 360px;
+            position: relative;
+            box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
+        }
+
+        .stars span {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+
+        .rating-badge {
+            position: absolute;
+            top: -1.2rem;
+            right: -1.2rem;
+            background: #ffeb3b;
+            color: #000;
+            font-weight: bold;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.1);
+            border: 3px solid #fff;
+        }
+
+        .read-more {
+            color: #dc3545;
+            cursor: pointer;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .profile-img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .review-text {
+            transition: all 0.3s ease;
+        }
+
+        .marquee-content.reverse {
+            animation: marquee-right 20s linear infinite;
+        }
+
+        @keyframes marquee-right {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+
+
+        /* faqs */
+
+        .faq-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 16px 0 0 0;
+                min-height: unset;
+            }
+
+            .faq-container {
+                flex-direction: column !important;
+                width: 100%;
+                max-width: 100vw;
+                border-radius: 0;
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .faq-left {
+                padding: 12px 0 0 0;
+                border-radius: 0;
+                width: 100%;
+                border-right: none;
+                align-items: center;
+                background: #d63357;
+            }
+
+            .faq-item {
+                margin: 4px 20px;
+                padding: 10px 8px 10px 12px;
+                font-size: 1rem;
+                width: 100%;
+                max-width: 100%;
+                /* background: #d63357 !important; */
+                color: #fff !important;
+                border-radius: 8px;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.07);
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+                transition: background 0.2s, color 0.2s, transform 0.2s;
+                overflow: hidden;
+            }
+
+            .faq-right {
+                padding: 16px 12px 0 12px;
+                font-size: 15px;
+            }
+
+            .faq-plus {
+                right: 8px;
+                width: 26px;
+                height: 26px;
+                font-size: 18px;
+            }
+
+            .faq-left p.fs-2 {
+                font-size: 1.4rem !important;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .faq-container {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: visible;
+        }
+
+        .faq-left {
+            background-color: #d63357;
+            color: white;
+            padding: 30px;
+            flex: 1;
+            border-right: 2px solid #dee2e6;
+            position: relative;
+            overflow: visible;
+        }
+
+        .faq-left h2 {
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 12px 60px 12px 60px;
+            /* balanced for overflow on both sides */
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: calc(100% + 40px);
+            /* Expand beyond red box */
+            margin-left: -20px;
+            /* Pull left side out */
+        }
+
+        .faq-item:hover {
+            background-color: white;
+            color: black;
+            transform: scale(1.09);
+            z-index: 2;
+        }
+
+        .faq-item .text {
+            text-align: center;
+            width: 100%;
+        }
+
+        .faq-plus {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 0, 0, 0.4);
+            color: #fbf9fa;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+
+        .faq-plus:hover,
+        .faq-item:hover .faq-plus {
+            background-color: #d63357;
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(214, 51, 87, 0.25);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        /* Small screen: faq-item hover text black */
+        @media (max-width: 768px) {
+
+            .faq-item:hover,
+            .faq-item:hover .text {
+                color: #000 !important;
+            }
+        }
+
+        .faq-right {
+            flex: 1;
+            text-align: justify;
+            margin: 50px;
+            padding: 40px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+
+
+        /* footer */
+
+        .custom-footer {
+            background:
+                url(imgs/sky-slue.png) top right,
+                url(imgs/yellow-green.png) bottom right;
+
+            background-size: 400px, 500px;
+            /* adjust sizes */
+            background-repeat: no-repeat;
+        }
   </style>
 </head>
 <body>
 <section>
-<!-- Navbar -->
-<nav class="navbar p-4 navbar-expand-lg navbar-light bg-light ">
+ <!-- Navbar -->
+   <nav class="navbar p-4 navbar-expand-lg navbar-light bg-light position-relative">
   <div class="container">
     <!-- Logo -->
     <a class="navbar-brand" href="#">
@@ -101,7 +450,7 @@
     </button>
 
     <!-- Navbar Content -->
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse custom-mobile-nav" id="navbarNavDropdown">
       <ul class="navbar-nav mx-auto ms-5 ps-5">
         <li class="nav-item m-2">
           <a class="nav-link fs-5 fw-bold active" href="homepage.html">Home</a>
@@ -109,37 +458,30 @@
         <li class="nav-item m-2">
           <a class="nav-link fs-5 fw-bold" href="aboutpage.html">About</a>
         </li>
-
-        <!-- Service Dropdown -->
+        <!-- Dropdown: Service -->
         <li class="nav-item dropdown m-2">
-          <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#" id="serviceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Service
-          </a>
+          <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#" id="serviceDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> Service </a>
           <ul class="dropdown-menu shadow border-0 rounded-3 p-2" aria-labelledby="serviceDropdown">
-            <li><a class="dropdown-item rounded " href="housmoving1.html">Housemoving1</a></li>
-            <li><a class="dropdown-item rounded " href="housemoving2.html">Housemoving2</a></li>
-            <li><a class="dropdown-item rounded " href="housemoving3.html">Housemoving3</a></li>
+            <li><a class="dropdown-item rounded" href="housmoving1.html">Housemoving1</a></li>
+            <li><a class="dropdown-item rounded" href="housemoving2.html">Housemoving2</a></li>
+            <li><a class="dropdown-item rounded" href="hohousemoving3.html">Housemoving3</a></li>
             <li><a class="dropdown-item rounded" href="housemoving4.html">Housemoving4</a></li>
-
           </ul>
         </li>
-
         <!-- Blog -->
         <li class="nav-item m-2">
           <a class="nav-link fs-5 fw-bold" href="blogpage.html">Blog</a>
         </li>
-
-        <!-- Resources Dropdown -->
+        <!-- Dropdown: Resources -->
         <li class="nav-item dropdown m-2">
-          <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Resources
-          </a>
+          <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> Resources </a>
           <ul class="dropdown-menu shadow border-0 rounded-3 p-2" aria-labelledby="resourcesDropdown">
             <li><a class="dropdown-item rounded fw-semibold" href="#">Docs</a></li>
             <li><a class="dropdown-item rounded fw-semibold" href="#">Tutorials</a></li>
           </ul>
         </li>
-
         <!-- Contact -->
         <li class="nav-item m-2">
           <a class="nav-link fs-5 fw-bold" href="contactpage.html">Contact</a>
@@ -148,9 +490,7 @@
 
       <!-- Login Button -->
       <div class="d-lg-flex align-items-center ms-lg-3 w-100 justify-content-lg-end justify-content-center mt-3 mt-lg-0">
-        <a href="#" class="btn btn-danger rounded-pill px-4 py-2 text-white fw-bold">
-          Log In
-        </a>
+        <a href="#" class="btn btn-danger rounded-pill px-4 py-2 text-white fw-bold"> Log In </a>
       </div>
     </div>
   </div>
@@ -184,6 +524,573 @@
   </div>
 
 </section>
+
+
+   <!-- second  section -->
+
+
+
+
+   <!-- ---------top destinations----------------- -->
+
+
+
+
+        <!-- Heading -->
+        <div class="container">
+            <h2 class="text-center main-heading" style="line-height: 40px;">
+                We are on the mission to make your lives easy, so <u><br>you can focus on what matters to <span style="color: red;">your business</span>.</u>
+            </h2>
+
+            <!-- Image section with overlay -->
+            <div class="image-section">
+
+                <div class=" d-flex align-items-center">
+                    <!-- Left: Girl image -->
+                             <div class="d-none d-md-block">
+      <img class="girl-img img-fluid" src="imgs/LAPTOP-GIRL.png" alt="Girl" />
+    </div>
+
+                    <!-- Right: Text content -->
+                    <div class="text-content text-white p-3 p-lg-0">
+  <h5 class="fw-bold">Contact Us</h5>
+  <h4 class="quote-text">
+    Contact us for a non-obligation on- <br>site quotation for your business.
+  </h4>
+  <p class="quote-text">
+    Get <span style="color: red;">5% discount</span> when you fill up our form <br> and upload your pictures
+  </p>
+  <button class="btn btn-custom">Get a Quote</button>
+</div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- moving to signapore -->
+        <div class="container">
+            <h2 class="section-heading">The Best Movers In <span>Singapore</span></h2>
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="imgs/coins.png" alt="Value for Money" class="feature-img">
+                        <div class="feature-title">Value for Money</div>
+                        <div class="feature-text">You get the most quality service for the price that you pay.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="imgs/star.png" alt="Referral Rates" class="feature-img">
+                        <div class="feature-title">Over 90% Referral Rates</div>
+                        <div class="feature-text">Our customers are so satisfied that their friends and family hear
+                            about us.</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <img src="imgs/bulb.png" alt="Green Initiative" class="feature-img">
+                        <div class="feature-title">Green Initiative</div>
+                        <div class="feature-text">Helping planet: reused & return the environment. We stand with reuse
+                            our packing
+                            materials as much as possible.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- -----------difficult becom easy -->
+
+
+        <!-- solutions for all small and large  moves -->
+
+
+        <!-- third section -->
+
+        <div class="container">
+            <div class="col-md-12 pt-5 pb-5     mt-5 mb-5  " style="background-color: #fcf5f5;">
+
+              <h2 class="text-center">Save cost with minimal <span style="color: red;">downtime</span></h2>
+                <p class="p-5 text-center">Moving an office can be a highly complex process which needs careful planning as it isn’t as simple as moving assets to a new location. A smooth and carefully planned move can well ensure that your business go on as usual without much interruption.
+Reddot Movers can help you breakdown your move into smaller and manageable steps to help you not become overwhelmed.
+We serve businesses of all sizes and provide full packing services. Understanding and catering to your moving needs are as important as safe handling of your items so that your company can be back up and running as soon as possible.</p>
+            </div>
+
+        </div>
+
+
+
+         <!--  fourth section-->
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <!-- Left Section -->
+      <div class="col-md-5">
+        <h1 class="  fw-bold " style="letter-spacing: 1px;">Service <span style="color: red;">Levels</span></h1>
+        <p class=" mt-5 mb-5">
+          We are flexible in providing our customers customizable service levels to cater to you affordability,
+          convenience and satisfaction.
+        </p>
+
+        <select style="border: none;" class="form-select">
+          <option style="background-color: #ff4e6a;"  >Basic</option>
+           <option style="background-color: #ff4e6a;" >option 1</option>
+            <option style="background-color: #ff4e6a;"  >option2</option>
+        </select>
+        <hr>
+  
+        
+        <select style="border: none; " class="form-select">
+          <option style="background-color: #ff4e6a; " >Full pakaging</option>
+           <option style="background-color: #ff4e6a; "  >option 1</option>
+            <option style="background-color: #ff4e6a;"  >option2</option>
+        </select>
+        <hr>
+  
+
+        
+        <select style="border: none;" class="form-select">
+          <option style="background-color: #ff4e6a;"  >Custom</option>
+           <option style="background-color: #ff4e6a;"  >option 1</option>
+            <option style="background-color: #ff4e6a;"  >option2</option>
+        </select>
+        <hr>
+  
+
+        <button class="btn btn-quote  bg-danger mt-5 rounded-pill text-light  p-2   " >Get a Quote</button>
+      </div>
+
+      <!-- Right Section -->
+    <div class="col-md-7 text-center">
+  <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+
+    <!-- First Image -->
+    <img
+      src="imgs/service img1.png"
+      alt="Image 1"
+      class="img-fluid img-circle mb-3 mb-md-0 me-md-n5"
+      style="z-index: 1;"
+    >
+
+    <!-- Second Image -->
+    <img
+      src="imgs/service-img2.png"
+      alt="Image 2"
+      class="img-fluid img-circle ms-md-4"
+    >
+  </div>
+
+  <p class="desc-text mx-auto ms-md-5 me-md-5 mt-3">
+    You can pre-pack loose items and your own personal effects in carton boxes delivered by us and our movers will
+    take care of the rest – Truck, professional labour, wrapping service and some simple disassembly of furniture.
+  </p>
+</div>
+
+    </div>
+  </div>
+
+        <!-- marquee -->
+
+        <section class="section4 mt-5">
+            <div class="container-fluid">
+                <div class="row justify-content-center mb-5 mt-5">
+                    <div class="col-12 text-center">
+                        <h1>Awesome <span class="text-danger">Reviews</span></h1>
+                        <p class="fs-5 mt-3" style="letter-spacing: normal;">What our customers say</p>
+                    </div>
+                </div>
+                <!-- Marquee Row 1: Right to Left -->
+                <div class="row marquee-row">
+                    <div class="col-12">
+                        <div class="marquee-content d-flex flex-nowrap">
+                            <!-- Card 1 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="4"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/40" alt="Sarah Lee" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Sarah Lee</div>
+                                        <div class="text-muted small">3 months ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Google</div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/41" alt="Ali Khan" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Ali Khan</div>
+                                        <div class="text-muted small">1 month ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Yelp</div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/42" alt="Priya Patel" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Priya Patel</div>
+                                        <div class="text-muted small">2 weeks ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Facebook</div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/43" alt="Maria Gomez" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Maria Gomez</div>
+                                        <div class="text-muted small">5 days ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Trustpilot</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Marquee Row 2: Left to Right -->
+                <div class="row marquee-row">
+                    <div class="col-12">
+                        <div class="marquee-content2 d-flex flex-nowrap">
+                            <!-- Card 1 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="4"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/44" alt="John Doe" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">John Doe</div>
+                                        <div class="text-muted small">4 months ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Google</div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/45" alt="Emily Smith" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Emily Smith</div>
+                                        <div class="text-muted small">2 months ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Yelp</div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/46" alt="Liam Wong" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Liam Wong</div>
+                                        <div class="text-muted small">3 weeks ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Facebook</div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/47" alt="Sofia Rossi" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Sofia Rossi</div>
+                                        <div class="text-muted small">1 week ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Trustpilot</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Marquee Row 3: Right to Left -->
+                <div class="row marquee-row">
+                    <div class="col-12">
+                        <div class="marquee-content d-flex flex-nowrap">
+                            <!-- Card 1 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="4"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/48" alt="Ava Brown" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Ava Brown</div>
+                                        <div class="text-muted small">6 months ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Google</div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/49" alt="Noah Kim" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Noah Kim</div>
+                                        <div class="text-muted small">2 months ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Yelp</div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/50" alt="Lucas Silva" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Lucas Silva</div>
+                                        <div class="text-muted small">1 month ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Facebook</div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="review-card">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="stars" data-rating="5"></div>
+                                    <div class="rating-badge">5.0</div>
+                                </div>
+                                <p class="text-secondary review-text">
+                                    Don and the team has been of great help <br> for my office reno! The team was
+                                    professional, <br>
+                                    helpful <br>
+                                    <span class="read-more">Read More...</span>
+                                </p>
+                                <div class="d-flex align-items-center mt-3">
+                                    <img src="https://i.pravatar.cc/51" alt="Emma Müller" class="profile-img me-2">
+                                    <div>
+                                        <div class="fw-bold">Emma Müller</div>
+                                        <div class="text-muted small">3 weeks ago</div>
+                                    </div>
+                                    <div class="ms-auto text-muted small">Posted on Trustpilot</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- js--------------- -->
+        <script>
+            // STAR LOGIC
+            document.querySelectorAll('.stars').forEach(container => {
+                const rating = parseFloat(container.dataset.rating) || 0;
+                for (let i = 0; i < 5; i++) {
+                    const star = document.createElement('span');
+                    star.innerHTML = i < rating ? '★' : '☆';
+                    star.style.color = i < rating ? '#f4c150' : '#e0e0e0';
+                    container.appendChild(star);
+                }
+            });
+
+            // READ MORE LOGIC
+            document.querySelectorAll('.review-card').forEach(card => {
+                const reviewText = card.querySelector('.review-text');
+                const readMore = card.querySelector('.read-more');
+                if (!readMore) return;
+                const shortText = reviewText.innerHTML;
+                const fullText = `Don and the team has been of great help for my office reno! The team was professional, helpful and always on time. They listened to my requirements and delivered exactly what I wanted. Highly recommended!`;
+                readMore.addEventListener('click', () => {
+                    reviewText.textContent = fullText;
+                });
+            });
+        </script>
+        <!-- ----------------faqs--------------- -->
+
+        <div class="faq-section">
+            <div class="container faq-container">
+                <div class="row">
+                    <!-- Left Side -->
+                    <div class="col-lg-5 faq-left d-flex flex-column">
+                        <p class="fs-2">FAQs</p>
+                        <div class="w-100 d-flex flex-column flex-md-column justify-content-center">
+                            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+                                <span class="text">What Services Do You Offer?</span>
+                                <span class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+                                <span class="text">How Does Reddot Movers Provide A Great Moving Experience?</span>
+                                <span class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+                                <span class="text">How Do I Go About Getting Your Service?</span>
+                                <span class="faq-plus">+</span>
+                            </div>
+                            <div class="faq-item mb-3 ms-md-5 mx-auto mx-md-0">
+                                <span class="text">When Should I Book Your Service?</span>
+                                <span class="faq-plus">+</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-- Right Side -->
+                    <div class="col-lg-7 faq-right d-flex align-items-center">
+                        <p class="fs-5 mt-5">
+The time it takes for international moving depends on several factors, such as the distance between your current and new location, the shipping method you choose, and the time required for customs clearance. Generally, international moving can take anywhere from several weeks to several months.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- -----------------footer-------------- -->
+
+        <footer class="custom-footer " style="padding: 70px; padding-top: 130px;
+    ">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+                    <!-- Logo and Socials -->
+                    <div>
+                        <div class="logo mb-2"><img src="asets/logo.png" alt=""></div>
+                        <small>
+                            Monday - Friday 9am - 5:30pm<br>
+                            Saturday 9am - 1:30pm<br>
+                            Sunday Closed
+                        </small>
+                        <div class="social-icons mt-3">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div>
+                        <h6 class="fw-bold">Hours</h6>
+                        <p class="mb-1">Monday - Friday 9am - 5:30pm</p>
+                        <p class="mb-1">Saturday 9am - 1:30pm</p>
+                        <p class="mb-0">Sunday Closed</p>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h6 class="fw-bold">Contact Us</h6>
+                        <p class="mb-1">Reddot X Pte Ltd.</p>
+                        <p class="mb-1"><a href="mailto:hello@reddotmovers.sg"><span
+                                    style="color: black;"><u>hello@reddotmovers.sg</u></span></a></p>
+                        <p class="mb-1">Local Move: +65 9771 4475</p>
+                        <p class="mb-0">International Move: +65 9800 5411</p>
+                    </div>
+
+                    <!-- Address -->
+                    <div>
+                        <h6 class="fw-bold">Address</h6>
+                        <p class="mb-1">17 Mandai Estate 04-01A</p>
+                        <p class="mb-0">Singapore 729934<br>(Warehouse)</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

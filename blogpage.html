@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moving Blog Cards</title>
+ 
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+
+
+
+
+ @media (max-width: 991.98px) {
+    .custom-mobile-nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #f8f9fa;
+      z-index: 999;
+      padding: 1rem;
+    }
+  }
+        /* Background and Overlay */
+        .hero-section {
+            background: url(imgs/herosec.png) no-repeat center center/cover;
+            position: relative;
+            height: 100vh;
+            /* color: white; */
+        }
+
+ .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+  .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /* background-color: rgba(0, 0, 0, 0.4); */
+      z-index: 1;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .read-more {
+      color: red;
+      font-size: 13px;
+    }
+    .author-info img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+    .author-info {
+      font-size: 13px;
+    }
+    .cta-section {
+    background-image: url(imgs/blog-bg.png);
+    background-repeat: no-repeat;
+background-size: cover;
+                
+      border-radius: 15px;
+      color: white;
+      padding: 60px 20px;
+    }
+    .btn-pink {
+      background-color: #e53958;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      color: white;
+    }
+    .btn-pink:hover {
+      background-color: #d6304a;
+    }
+
+  /* footer */
+
+        .custom-footer {
+            background:
+                url(imgs/sky-slue.png) top right,
+                url(imgs/yellow-green.png) bottom right;
+
+            background-size: 400px, 500px;
+            /* adjust sizes */
+            background-repeat: no-repeat;
+        }
+
+
+    .img-rounded {
+      border-radius: 20px;
+      width: 80%;
+      height: auto;
+      object-fit: cover;
+    }
+    .tag {
+      background-color: #f15c75;
+      color: white;
+      padding: 9px 30px;
+      border-radius: 7px;
+      font-size: 15px;
+    }
+    .author-img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+
+  </style>
+</head>
+<body>
+
+ <section class="">
+    <!-- Navbar -->
+   <nav class="navbar p-4 navbar-expand-lg navbar-light bg-light position-relative">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img style="width: 100%;" src="imgs/logo.png" alt="Redot Logo" height="40">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse custom-mobile-nav" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto ms-5 ps-5">
+        <li class="nav-item m-2">
+          <a class="nav-link fs-5 fw-bold active" href="homepage.html">Home</a>
+        </li>
+        <li class="nav-item m-2">
+          <a class="nav-link fs-5 fw-bold" href="aboutpage.html">About</a>
+        </li>
+        <!-- Dropdown: Service -->
+        <li class="nav-item dropdown m-2">
+          <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#" id="serviceDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> Service </a>
+          <ul class="dropdown-menu shadow border-0 rounded-3 p-2" aria-labelledby="serviceDropdown">
+            <li><a class="dropdown-item rounded" href="housmoving1.html">Housemoving1</a></li>
+            <li><a class="dropdown-item rounded" href="housemoving2.html">Housemoving2</a></li>
+            <li><a class="dropdown-item rounded" href="hohousemoving3.html">Housemoving3</a></li>
+            <li><a class="dropdown-item rounded" href="housemoving4.html">Housemoving4</a></li>
+          </ul>
+        </li>
+        <!-- Blog -->
+        <li class="nav-item m-2">
+          <a class="nav-link fs-5 fw-bold" href="blogpage.html">Blog</a>
+        </li>
+        <!-- Dropdown: Resources -->
+        <li class="nav-item dropdown m-2">
+          <a class="nav-link fs-5 fw-bold dropdown-toggle" href="#" id="resourcesDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false"> Resources </a>
+          <ul class="dropdown-menu shadow border-0 rounded-3 p-2" aria-labelledby="resourcesDropdown">
+            <li><a class="dropdown-item rounded fw-semibold" href="#">Docs</a></li>
+            <li><a class="dropdown-item rounded fw-semibold" href="#">Tutorials</a></li>
+          </ul>
+        </li>
+        <!-- Contact -->
+        <li class="nav-item m-2">
+          <a class="nav-link fs-5 fw-bold" href="contactpage.html">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Login Button -->
+      <div class="d-lg-flex align-items-center ms-lg-3 w-100 justify-content-lg-end justify-content-center mt-3 mt-lg-0">
+        <a href="#" class="btn btn-danger rounded-pill px-4 py-2 text-white fw-bold"> Log In </a>
+      </div>
+    </div>
+  </div>
+</nav>
+        <!-- Hero Section -->
+       <div class="hero-section">
+              <div class="overlay"></div>
+            <div class="container hero-content">
+                <div class="row align-items-center">
+                    <!-- Left Side Content -->
+                    <div class="col-md-12 text-white text-center mt-5">
+                        <h1 class="display-3 mb-3 text-dark fw-semibold">Local house moving <br><span
+                                style="color: red;">services</span></h1>
+                        <p class="lead mb-4 text-dark">We build modern, responsive, and beautiful websites <br> for your
+                            business. Let’s grow together!</p>
+                        <a href="#" class="btn btn-danger btn-lg mx-auto mx-lg-0" style="border-radius: 59px;">Get
+                            Started</a>
+                            <p class="mt-5" style="color: rgb(234, 234, 234); font-size: 80px; letter-spacing: 10px;">READ MORE</p>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+<div class="container my-5">
+  <div class="row align-items-center g-4">
+    <!-- Left Image -->
+    <div class="col-lg-6 col-md-12 mt-4" >
+      <img src="imgs/blog-img1.png" alt="Moving Insurance" class="img-rounded shadow-sm">
+    </div>
+
+    <!-- Right Content -->
+    <div class="col-lg-6 col-md-12">
+      <span class="tag mb-2 d-inline-block">Moving</span>
+      <h1 class="fw-bold mb-3 " style="line-height:50px; padding-top: 20px; ">Moving Insurance <br> Simplified: What is <br> Covered and Not</h1>
+      <div class="d-flex align-items-center gap-2">
+        <img src="imgs/blog-img1.png" alt="Author" class="author-img">
+        <div>
+          <strong class="d-block">Ali Abbas</strong>
+          <small class="text-muted">Jul 25, 2025 · Moving</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container py-5">
+  <div class="row g-4 align-items-stretch">
+
+    <!-- Card 1 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Moving Insurance Simplified: What is Covered and Not 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 20, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Hidden Dangers of Choosing Established Moving Companies in Singapore: The Importance of Researching Alternative Options 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 21, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Top 5 Premium Movers in Singapore 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 22, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container py-5">
+  <div class="row g-4 align-items-stretch">
+
+    <!-- Card 1 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Moving Insurance Simplified: What is Covered and Not 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 20, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img5.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Hidden Dangers of Choosing Established Moving Companies in Singapore: The Importance of Researching Alternative Options 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 21, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img6.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Top 5 Premium Movers in Singapore 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 22, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container py-5">
+  <div class="row g-4 align-items-stretch">
+
+    <!-- Card 1 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img-pink.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Moving Insurance Simplified: What is Covered and Not 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 20, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img7.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Hidden Dangers of Choosing Established Moving Companies in Singapore: The Importance of Researching Alternative Options 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 21, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img8.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Top 5 Premium Movers in Singapore 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 22, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+     <div class="col-md-4 d-flex">
+      <div class="card h-100 w-100">
+        <img src="imgs/blog-img10.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">
+            Hidden Dangers of Choosing Established Moving Companies in Singapore: The Importance of Researching Alternative Options 
+            <span class="read-more">Read More....</span>
+          </h6>
+          <div class="d-flex align-items-center mt-3 author-info">
+            <img src="imgs/blog-img1.png" alt="">
+            <div class="ms-2">
+              <div><strong>Ali Abbas</strong></div>
+              <small>Jul 21, 2025 | Moving</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+ 
+
+<div class="container my-5">
+  <div class="cta-section text-center">
+    <h5 class="fw-semibold mb-2">What is your story?</h5>
+    <p class="mb-4">Find out more about Reddot Movers and our services today!</p>
+    <a href="#" class="btn btn-pink">Contact Us</a>
+  </div>
+</div>
+     
+<!-- -----------------footer-------------- -->
+
+        <footer class="custom-footer " style="padding: 70px; padding-top: 130px;
+    ">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+                    <!-- Logo and Socials -->
+                    <div>
+                        <div class="logo mb-2"><img src="imgs/footer-logo.png" alt=""></div>
+                        <small>
+                            Monday - Friday 9am - 5:30pm<br>
+                            Saturday 9am - 1:30pm<br>
+                            Sunday Closed
+                        </small>
+                        <div class="social-icons mt-3">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div>
+                        <h6 class="fw-bold">Hours</h6>
+                        <p class="mb-1">Monday - Friday 9am - 5:30pm</p>
+                        <p class="mb-1">Saturday 9am - 1:30pm</p>
+                        <p class="mb-0">Sunday Closed</p>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h6 class="fw-bold">Contact Us</h6>
+                        <p class="mb-1">Reddot X Pte Ltd.</p>
+                        <p class="mb-1"><a href="mailto:hello@reddotmovers.sg"><span
+                                    style="color: black;"><u>hello@reddotmovers.sg</u></span></a></p>
+                        <p class="mb-1">Local Move: +65 9771 4475</p>
+                        <p class="mb-0">International Move: +65 9800 5411</p>
+                    </div>
+
+                    <!-- Address -->
+                    <div>
+                        <h6 class="fw-bold">Address</h6>
+                        <p class="mb-1">17 Mandai Estate 04-01A</p>
+                        <p class="mb-0">Singapore 729934<br>(Warehouse)</p>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+
+
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
